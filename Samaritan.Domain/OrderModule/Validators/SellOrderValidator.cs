@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Samaritan.Domain.OrderModule.Validators
 {
-    public class SellOrderValidator : AbstractValidator<BuyOrderCommand>
+    public class SellOrderValidator : AbstractValidator<SellOrderCommand>
     {
         public SellOrderValidator()
         {
