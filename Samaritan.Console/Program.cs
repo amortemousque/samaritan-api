@@ -2,8 +2,12 @@
 using System;
 using Samaritan.Domain;
 using Samaritan.Domain.OrderModule.Commands;
+using Samaritan.Application.Interfaces;
+using Samaritan.Application.Services;
+
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 
 namespace Samaritan.Console
 {
@@ -30,7 +34,8 @@ namespace Samaritan.Console
 
             var buyResponse = _mediator.Send(buyCommand);
             var sellResponse = _mediator.Send(sellCommand);
-
+            ITraderInfo info = new TraderInfoAppService();
+            Debug.WriteLine("Coucou");
         }
 
 

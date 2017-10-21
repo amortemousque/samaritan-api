@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Samaritan.Domain\Samaritan.Domain.csproj" />
+    <ProjectReference Include="..\Samaritan.Application\Samaritan.Application.csproj" />
   </ItemGroup>
 
 </Project>
