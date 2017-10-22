@@ -9,11 +9,11 @@ namespace Samaritan.Infrastructure.ElasticSearch
         public static void RegisterMappings(ElasticClient client)
         {
             var response = client.IndexExists(new IndexExistsRequest("order"));
-            if(!response.Exists){
+            if(!response.Exists) {
                 var reponse = client.CreateIndexAsync("order", c => c
-                .Mappings(ms => ms
-                    .Map<Order>(m => m.AutoMap())
-                )
+                    .Mappings(ms => ms
+                        .Map<Order>(m => m.AutoMap())
+                    )
                 );
             }
         }

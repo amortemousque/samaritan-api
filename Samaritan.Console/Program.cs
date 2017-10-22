@@ -51,8 +51,10 @@ namespace Samaritan.Console
             //configure elasticSearch
             var settings = new ConnectionSettings(new Uri(configuration["ElasticSearch:Uri"]));
             settings.BasicAuthentication(configuration["ElasticSearch:Login"],configuration["ElasticSearch:Password"]);
-            var elasticClient  = new ElasticClient(settings);
+            var elasticClient = new ElasticClient(settings);
+
             ElasticSearchConfig.RegisterMappings(elasticClient);
+
             services.AddSingleton<ElasticClient>(elasticClient);
 
             //configure service Ioc
