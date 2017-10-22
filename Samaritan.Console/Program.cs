@@ -10,8 +10,6 @@ using MediatR;
 using Samaritan.Infrastructure.ElasticSearch;
 using Samaritan.Domain;
 using Samaritan.Domain.OrderModule.Commands;
-using Samaritan.Application.Interfaces;
-using Samaritan.Application.Services;
 using Samaritan.Infrastructure.DependencyInjection;
 using Samaritan.Infrastructure.AutoMapper;
 
@@ -33,8 +31,7 @@ namespace Samaritan.Console
 
             var buyResponse = Mediator.Send(buyCommand);
             var sellResponse = Mediator.Send(sellCommand);
-            ITraderInfo info = new TraderInfoAppService();
-            Debug.WriteLine("Coucou");
+
         }
 
         static private void Setup() {

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samaritan.Console", "Samaritan.Console\Samaritan.Console.csproj", "{279558F3-06B5-47D3-80F1-9E034BE0386A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samaritan.Console", "Samaritan.Console\Samaritan.Console.csproj", "{279558F3-06B5-47D3-80F1-9E034BE0386A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samaritan.Domain", "Samaritan.Domain\Samaritan.Domain.csproj", "{BA843DAC-F7B4-40CD-99F2-218788B2C04E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samaritan.Domain", "Samaritan.Domain\Samaritan.Domain.csproj", "{BA843DAC-F7B4-40CD-99F2-218788B2C04E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samaritan.Application", "Samaritan.Application\Samaritan.Application.csproj", "{7C2521DC-57DC-4F28-B8F2-22EAE9B07574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samaritan.Infrastructure", "Samaritan.Infrastructure\Samaritan.Infrastructure.csproj", "{9B2D4B07-B225-425B-861C-72253B072C17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{BA843DAC-F7B4-40CD-99F2-218788B2C04E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA843DAC-F7B4-40CD-99F2-218788B2C04E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA843DAC-F7B4-40CD-99F2-218788B2C04E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C2521DC-57DC-4F28-B8F2-22EAE9B07574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C2521DC-57DC-4F28-B8F2-22EAE9B07574}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C2521DC-57DC-4F28-B8F2-22EAE9B07574}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C2521DC-57DC-4F28-B8F2-22EAE9B07574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2D4B07-B225-425B-861C-72253B072C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2D4B07-B225-425B-861C-72253B072C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2D4B07-B225-425B-861C-72253B072C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2D4B07-B225-425B-861C-72253B072C17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

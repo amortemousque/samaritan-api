@@ -15,7 +15,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samaritan.Domain\Samaritan.Domain.csproj" />
-    <ProjectReference Include="..\Samaritan.Application\Samaritan.Application.csproj" />
     <ProjectReference Include="..\Samaritan.Infrastructure\Samaritan.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
