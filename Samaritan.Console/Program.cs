@@ -8,32 +8,44 @@ using Samaritan.Application.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using Microsoft.Extensions.Configuration;
+using System.IO;
+using Samaritan.Infrastructure.DependencyInjection;
+using Newtonsoft.Json;
+using Samaritan.Infrastructure.AutoMapper;
 
 namespace Samaritan.Console
 {
     class Program
     {
-        public static IMediator _mediator { get; private set; }
+        public static IMediator Mediator { get; private set; }
+        
+        public static IConfigurationRoot Configuration { get; private set; }
+
 
         static void Main(string[] args)
         {
+            //configure service provider
+            var Configuration = new ConfigurationBuilder()
+                .SetBasePath(Path.GetFullPath("."))
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-            //setup our DI
-            IServiceCollection serviceProvider = new ServiceCollection();
-            serviceProvider.AddMediatR(typeof(OrderHandlers));
-            var providerInstance = serviceProvider.BuildServiceProvider();
+            IServiceCollection services = new ServiceCollection();
+            InjectorBootstrapper.RegisterServices(services, Configuration);
+            IServiceProvider serviceProvider = services.BuildServiceProvider();
 
+            //configure AutoMapper
+            AutoMapperConfig.RegisterMappings();
 
-
-            //do the actual work here
-            var mediator = providerInstance.GetService<IMediator>();
-            _mediator = mediator;
+            //get mediator
+            Mediator = serviceProvider.GetService<IMediator>();;
 
             var buyCommand = new BuyOrderCommand();
             var sellCommand = new SellOrderCommand();
 
-            var buyResponse = _mediator.Send(buyCommand);
-            var sellResponse = _mediator.Send(sellCommand);
+            var buyResponse = Mediator.Send(buyCommand);
+            var sellResponse = Mediator.Send(sellCommand);
             ITraderInfo info = new TraderInfoAppService();
             Debug.WriteLine("Coucou");
         }
