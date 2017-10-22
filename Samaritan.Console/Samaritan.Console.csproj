@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
+    <PackageReference Include="Nest" Version="5.5.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samaritan.Domain\Samaritan.Domain.csproj" />

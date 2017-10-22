@@ -11,12 +11,10 @@ namespace Samaritan.Infrastructure.DependencyInjection
 {
     public class InjectorBootstrapper
     {
-         public static void RegisterServices(IServiceCollection services, IConfigurationRoot configuration)
+         public static void RegisterServices(IServiceCollection services)
         {
             services.AddLogging();
             services.AddMediatR(typeof(OrderHandlers));
-            services.AddSingleton<IConfigurationRoot>(configuration);
-
         }
     }
 }
