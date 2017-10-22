@@ -3,9 +3,9 @@ using Samaritan.Domain.Interfaces;
 
 namespace Samaritan.Infrastructure.Network
 {
-    public class TradingClient : ITradingClient
+    public class BitfinexTradingClient : ITradingClient
     {
-        public TradingClient()
+        public BitfinexTradingClient()
         {
         }
 

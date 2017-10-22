@@ -55,8 +55,8 @@ namespace Samaritan.Console
             ElasticSearchConfig.RegisterMappings(elasticClient);
 
             services.AddSingleton<ElasticClient>(elasticClient);
-
-            services.Add<ITrading>(() => new TradingClient()); 
+            services.AddTransient<ITradingClient, BitfinexTradingClient>();
+            
             //configure service Ioc
             InjectorBootstrapper.RegisterServices(services);
             //configure AutoMapper
