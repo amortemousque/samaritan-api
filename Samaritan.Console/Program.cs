@@ -12,6 +12,8 @@ using Samaritan.Domain;
 using Samaritan.Domain.OrderModule.Commands;
 using Samaritan.Infrastructure.DependencyInjection;
 using Samaritan.Infrastructure.AutoMapper;
+using Samaritan.Domain.Interfaces;
+using Samaritan.Infrastructure.Network;
 
 namespace Samaritan.Console
 {
@@ -54,12 +56,11 @@ namespace Samaritan.Console
 
             services.AddSingleton<ElasticClient>(elasticClient);
 
+            services.Add<ITrading>(() => new TradingClient()); 
             //configure service Ioc
             InjectorBootstrapper.RegisterServices(services);
-
             //configure AutoMapper
             AutoMapperConfig.RegisterMappings();
-
             ServiceProvider = services.BuildServiceProvider();
         }   
     }
